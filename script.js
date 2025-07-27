@@ -57,10 +57,11 @@ function showStep2() {
     const stepsContainer = document.querySelector('.generator-steps');
     
     let html = `
-        <div class="step" id="step1">
-            <h2>Step 1: Choose Category ✓</h2>
-            <p>Selected: <strong>${selectedCategory.name}</strong></p>
-        </div>
+    <div class="step" id="step1">
+        <h2>Step 1: Choose Category ✓</h2>
+        <p>Selected: <strong>${selectedCategory.name}</strong> 
+        <button class="back-btn" onclick="resetToStep1()">Change</button></p>
+    </div>
         <div class="step active" id="step2">
             <h2>Step 2: Choose Subcategory</h2>
             <p>Select a specific asset type</p>
@@ -97,10 +98,16 @@ function showStep3() {
             <h2>Step 1: Choose Category ✓</h2>
             <p>Selected: <strong>${selectedCategory.name}</strong></p>
         </div>
-        <div class="step" id="step2">
-            <h2>Step 2: Choose Subcategory ✓</h2>
-            <p>Selected: <strong>${selectedSubcategory.name}</strong></p>
-        </div>
+        <div class="step" id="step1">
+    <h2>Step 1: Choose Category ✓</h2>
+    <p>Selected: <strong>${selectedCategory.name}</strong> 
+    <button class="back-btn" onclick="resetToStep1()">Change</button></p>
+</div>
+<div class="step" id="step2">
+    <h2>Step 2: Choose Subcategory ✓</h2>
+    <p>Selected: <strong>${selectedSubcategory.name}</strong> 
+    <button class="back-btn" onclick="goBackToStep2()">Change</button></p>
+</div>
         <div class="step active" id="step3">
             <h2>Step 3: Choose Output Type</h2>
             <p>Select the type of output you want</p>
@@ -133,25 +140,21 @@ function showStep4() {
     const stepsContainer = document.querySelector('.generator-steps');
     
     let html = `
-        <div class="step" id="step1">
-            <h2>Step 1: Choose Category ✓</h2>
-            <p>Selected: <strong>${selectedCategory.name}</strong></p>
-        </div>
-        <div class="step" id="step2">
-            <h2>Step 2: Choose Subcategory ✓</h2>
-            <p>Selected: <strong>${selectedSubcategory.name}</strong></p>
-        </div>
-        <div class="step" id="step3">
-            <h2>Step 3: Choose Output Type ✓</h2>
-            <p>Selected: <strong>${selectedOutputType}</strong></p>
-        </div>
-        <div class="step active" id="step4">
-            <h2>Step 4: Generate Brief</h2>
-            <p>AI will generate a random brief for your selection</p>
-            <button class="generate-btn" onclick="generateBrief()">
-                🎲 Generate Random Brief
-            </button>
-        </div>
+    <div class="step" id="step1">
+        <h2>Step 1: Choose Category ✓</h2>
+        <p>Selected: <strong>${selectedCategory.name}</strong> 
+        <button class="back-btn" onclick="resetToStep1()">Change</button></p>
+    </div>
+    <div class="step" id="step2">
+        <h2>Step 2: Choose Subcategory ✓</h2>
+        <p>Selected: <strong>${selectedSubcategory.name}</strong> 
+        <button class="back-btn" onclick="goBackToStep2()">Change</button></p>
+    </div>
+    <div class="step" id="step3">
+        <h2>Step 3: Choose Output Type ✓</h2>
+        <p>Selected: <strong>${selectedOutputType}</strong> 
+        <button class="back-btn" onclick="goBackToStep3()">Change</button></p>
+    </div>
     `;
     
     stepsContainer.innerHTML = html;
@@ -166,4 +169,23 @@ function generateBrief() {
     });
     
     alert('Brief generation will be implemented in next step!');
+}
+// Reset to step 1
+function resetToStep1() {
+    selectedCategory = null;
+    selectedSubcategory = null;
+    selectedOutputType = null;
+    displayCategories();
+}
+
+// Go back to previous step
+function goBackToStep2() {
+    selectedSubcategory = null;
+    selectedOutputType = null;
+    showStep2();
+}
+
+function goBackToStep3() {
+    selectedOutputType = null;
+    showStep3();
 }
