@@ -1,12 +1,15 @@
 // Global variables
 let categoriesData = {};
+let briefTemplates = {};
 let selectedCategory = null;
 let selectedSubcategory = null;
 let selectedOutputType = null;
+let currentBrief = '';
 
-// Load categories data when page loads
+// Load data when page loads
 document.addEventListener('DOMContentLoaded', function() {
     loadCategories();
+    loadBriefTemplates();
 });
 
 // Load categories from JSON file
@@ -19,6 +22,62 @@ async function loadCategories() {
     } catch (error) {
         console.error('Error loading categories:', error);
     }
+}
+
+// Load brief templates
+async function loadBriefTemplates() {
+    try {
+        const response = await fetch('./data/brief-templates.json');
+        briefTemplates = await response.json();
+        console.log('Brief templates loaded successfully');
+    } catch (error) {
+        console.error('Error loading brief templates:', error);
+        // Fallback jika gagal load
+        briefTemplates = {
+            'social-media': {
+                'instagram-post': [
+                    'Create an engaging Instagram post for a modern brand launching their new product. Focus on lifestyle photography with warm, natural lighting.'
+                ]
+            }
+        };
+    }
+}
+
+// Random placeholders untuk brief templates
+const placeholders = {
+    brand_type: ['fashion', 'tech', 'food', 'lifestyle', 'fitness', 'beauty', 'travel', 'education'],
+    product_category: ['clothing', 'gadgets', 'supplements', 'accessories', 'books', 'software', 'services'],
+    age_group: ['young adults', 'millennials', 'Gen Z', 'professionals', 'seniors', 'teenagers'],
+    gender: ['person', 'woman', 'man', 'individual'],
+    location_type: ['urban', 'outdoor', 'home', 'office', 'studio', 'natural'],
+    business_type: ['startup', 'restaurant', 'consulting firm', 'retail store', 'agency', 'clinic'],
+    color_scheme: ['warm earth tones', 'cool blues and whites', 'vibrant rainbow', 'monochrome', 'pastel colors'],
+    number: ['3', '5', '7', '10'],
+    discount_percentage: ['20', '30', '50', '70'],
+    season: ['Spring', 'Summer', 'Fall', 'Winter'],
+    event_type: ['conference', 'workshop', 'product launch', 'webinar', 'networking event'],
+    industry: ['technology', 'healthcare', 'finance', 'education', 'retail', 'manufacturing'],
+    target_audience: ['young professionals', 'small business owners', 'students', 'families', 'entrepreneurs']
+};
+
+// Function untuk replace placeholders dengan random values
+function replacePlaceholders(template) {
+    let result = template;
+    
+    // Find all placeholders in format {placeholder_name}
+    const matches = template.match(/\{([^}]+)\}/g);
+    
+    if (matches) {
+        matches.forEach(match => {
+            const key = match.slice(1, -1); // Remove { and }
+            if (placeholders[key]) {
+                const randomValue = placeholders[key][Math.floor(Math.random() * placeholders[key].length)];
+                result = result.replace(match, randomValue);
+            }
+        });
+    }
+    
+    return result;
 }
 
 // Display categories in Step 1
@@ -163,7 +222,7 @@ function showStep4() {
     stepsContainer.innerHTML = html;
 }
 
-// Generate random brief (placeholder for now)
+// Main function untuk generate brief
 function generateBrief() {
     console.log('Generating brief for:', {
         category: selectedCategory.name,
@@ -171,7 +230,187 @@ function generateBrief() {
         outputType: selectedOutputType
     });
     
-    alert('Brief generation will be implemented in next step!');
+    // Convert names to match JSON keys
+    const categoryKey = selectedCategory.name.toLowerCase().replace(/\s+/g, '-');
+    const subcategoryKey = selectedSubcategory.name.toLowerCase().replace(/\s+/g, '-');
+    
+    // Cek apakah category ada di templates
+    if (!briefTemplates[categoryKey]) {
+        console.error('Category not found in templates:', categoryKey);
+        currentBrief = `Create a professional ${selectedOutputType} for ${selectedSubcategory.name} in the ${selectedCategory.name} category. Focus on high-quality design, clear messaging, and target audience engagement.`;
+        displayGeneratedBrief();
+        return;
+    }
+    
+    // Cek apakah subcategory ada di category
+    if (!briefTemplates[categoryKey][subcategoryKey]) {
+        console.error('Subcategory not found in templates:', subcategoryKey);
+        currentBrief = `Create a professional ${selectedOutputType} for ${selectedSubcategory.name}. Focus on modern design principles, clear communication, and user engagement.`;
+        displayGeneratedBrief();
+        return;
+    }
+    
+    // Get random template dari subcategory
+    const templates = briefTemplates[categoryKey][subcategoryKey];
+    const randomTemplate = templates[Math.floor(Math.random() * templates.length)];
+    
+    // Replace placeholders dengan random values
+    currentBrief = replacePlaceholders(randomTemplate);
+    
+    console.log('Generated brief:', currentBrief);
+    displayGeneratedBrief();
+}
+
+// Function untuk display generated brief
+function displayGeneratedBrief() {
+    const stepsContainer = document.querySelector('.generator-steps');
+    
+    let html = `
+        <div class="step" id="step1">
+            <h2>Step 1: Choose Category ✓</h2>
+            <p>Selected: <strong>${selectedCategory.name}</strong> 
+            <button class="back-btn" onclick="resetToStep1()">Change</button></p>
+        </div>
+        <div class="step" id="step2">
+            <h2>Step 2: Choose Subcategory ✓</h2>
+            <p>Selected: <strong>${selectedSubcategory.name}</strong> 
+            <button class="back-btn" onclick="goBackToStep2()">Change</button></p>
+        </div>
+        <div class="step" id="step3">
+            <h2>Step 3: Choose Output Type ✓</h2>
+            <p>Selected: <strong>${selectedOutputType}</strong> 
+            <button class="back-btn" onclick="goBackToStep3()">Change</button></p>
+        </div>
+        <div class="step active" id="step4">
+            <h2>Step 4: Generated Brief</h2>
+            <div class="brief-display">
+                <div class="brief-content">
+                    <h3>Your Creative Brief:</h3>
+                    <p class="generated-brief">${currentBrief}</p>
+                </div>
+                <div class="brief-meta">
+                    <p><strong>Category:</strong> ${selectedCategory.name}</p>
+                    <p><strong>Subcategory:</strong> ${selectedSubcategory.name}</p>
+                    <p><strong>Output Type:</strong> ${selectedOutputType}</p>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-secondary" onclick="regenerateBrief()">
+                    🎲 Generate New Brief
+                </button>
+                <button class="btn btn-primary" onclick="proceedToPrompts()">
+                    ✨ Generate Prompts
+                </button>
+                <button class="btn btn-back" onclick="showStep4()">
+                    ← Back
+                </button>
+            </div>
+        </div>
+    `;
+    
+    stepsContainer.innerHTML = html;
+}
+
+// Function untuk regenerate brief
+function regenerateBrief() {
+    generateBrief();
+}
+
+// Function untuk proceed ke step 5 (prompt generation)
+function proceedToPrompts() {
+    const stepsContainer = document.querySelector('.generator-steps');
+    
+    let html = `
+        <div class="step" id="step1">
+            <h2>Step 1: Choose Category ✓</h2>
+            <p>Selected: <strong>${selectedCategory.name}</strong></p>
+        </div>
+        <div class="step" id="step2">
+            <h2>Step 2: Choose Subcategory ✓</h2>
+            <p>Selected: <strong>${selectedSubcategory.name}</strong></p>
+        </div>
+        <div class="step" id="step3">
+            <h2>Step 3: Choose Output Type ✓</h2>
+            <p>Selected: <strong>${selectedOutputType}</strong></p>
+        </div>
+        <div class="step" id="step4">
+            <h2>Step 4: Generated Brief ✓</h2>
+            <p>Brief created successfully</p>
+        </div>
+        <div class="step active" id="step5">
+            <h2>Step 5: AI Prompt Generation</h2>
+            <div class="prompt-generation">
+                <p>Generating 3 AI prompts based on your brief...</p>
+                <div class="loading-animation">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-back" onclick="goBackToBrief()">
+                    ← Back to Brief
+                </button>
+            </div>
+        </div>
+    `;
+    
+    stepsContainer.innerHTML = html;
+    
+    // Simulate loading dan generate prompts
+    setTimeout(generatePrompts, 2000);
+}
+
+// Function untuk kembali ke brief
+function goBackToBrief() {
+    displayGeneratedBrief();
+}
+
+// Placeholder function untuk generate prompts (Step 5)
+function generatePrompts() {
+    const stepsContainer = document.querySelector('.generator-steps');
+    
+    let html = `
+        <div class="step" id="step1">
+            <h2>Step 1: Choose Category ✓</h2>
+            <p>Selected: <strong>${selectedCategory.name}</strong></p>
+        </div>
+        <div class="step" id="step2">
+            <h2>Step 2: Choose Subcategory ✓</h2>
+            <p>Selected: <strong>${selectedSubcategory.name}</strong></p>
+        </div>
+        <div class="step" id="step3">
+            <h2>Step 3: Choose Output Type ✓</h2>
+            <p>Selected: <strong>${selectedOutputType}</strong></p>
+        </div>
+        <div class="step" id="step4">
+            <h2>Step 4: Generated Brief ✓</h2>
+            <p>Brief created successfully</p>
+        </div>
+        <div class="step active" id="step5">
+            <h2>Step 5: AI Prompt Options</h2>
+            <p>Choose one of these AI prompts to create your visual asset:</p>
+            <div class="prompt-options">
+                <div class="prompt-option">
+                    <h4>Option 1: Detailed Prompt</h4>
+                    <p>Coming soon in next implementation...</p>
+                </div>
+                <div class="prompt-option">
+                    <h4>Option 2: Creative Prompt</h4>
+                    <p>Coming soon in next implementation...</p>
+                </div>
+                <div class="prompt-option">
+                    <h4>Option 3: Simple Prompt</h4>
+                    <p>Coming soon in next implementation...</p>
+                </div>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-back" onclick="goBackToBrief()">
+                    ← Back to Brief
+                </button>
+            </div>
+        </div>
+    `;
+    
+    stepsContainer.innerHTML = html;
 }
 
 // Reset to step 1
