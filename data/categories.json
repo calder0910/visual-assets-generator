@@ -4,47 +4,117 @@
       "id": 1,
       "name": "Social Media Assets",
       "subcategories": [
-        {
-          "id": 101,
-          "name": "YouTube thumbnail",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        },
-        {
-          "id": 102,
-          "name": "YouTube channel banner",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        },
-        {
-          "id": 103,
-          "name": "Instagram post",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        },
-        {
-          "id": 104,
-          "name": "Instagram Stories",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        },
-        {
-          "id": 105,
-          "name": "TikTok video covers",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        }
+        {"id": 101, "name": "YouTube thumbnail", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 102, "name": "YouTube channel banner", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 103, "name": "YouTube end screen templates", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 104, "name": "YouTube Shorts cover", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 105, "name": "Instagram post", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 106, "name": "Instagram Stories", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 107, "name": "Instagram Reels cover", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 108, "name": "TikTok video covers", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 109, "name": "Facebook post graphics", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 110, "name": "Twitter header banners", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 111, "name": "LinkedIn post graphics", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 112, "name": "Pinterest pins", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]}
       ]
     },
     {
       "id": 2,
       "name": "Marketing & Advertising",
       "subcategories": [
-        {
-          "id": 201,
-          "name": "Digital ad banners",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        },
-        {
-          "id": 202,
-          "name": "Email marketing headers",
-          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
-        }
+        {"id": 201, "name": "Digital ad banners", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 202, "name": "Email marketing headers", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 203, "name": "Landing page hero sections", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 204, "name": "Promotional graphics", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 205, "name": "Sale banners", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Branding & Identity",
+      "subcategories": [
+        {"id": 301, "name": "Logo designs", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]},
+        {"id": 302, "name": "Business card layouts", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 303, "name": "Letterhead templates", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 304, "name": "Brand color palette cards", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 305, "name": "Icon sets", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Web & Digital",
+      "subcategories": [
+        {"id": 401, "name": "Website headers", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]},
+        {"id": 402, "name": "Blog featured images", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 403, "name": "UI component designs", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]},
+        {"id": 404, "name": "Button variations", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]},
+        {"id": 405, "name": "App icons", "outputTypes": ["Code-based Graphics", "Image"]}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Print Materials",
+      "subcategories": [
+        {"id": 501, "name": "Flyer layouts", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 502, "name": "Poster designs", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 503, "name": "Brochure layouts", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 504, "name": "Menu designs", "outputTypes": ["Design Structure/Layout", "Image"]},
+        {"id": 505, "name": "Business form templates", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]}
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Entertainment & Gaming",
+      "subcategories": [
+        {"id": 601, "name": "Twitch banners", "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 602, "name": "Gaming tournament banners", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 603, "name": "Esports team logos", "outputTypes": ["Code-based Graphics", "Image"]},
+        {"id": 604, "name": "Stream thumbnail templates", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 605, "name": "Gaming meme templates", "outputTypes": ["Image", "Design Structure/Layout"]}
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Educational & Training",
+      "subcategories": [
+        {"id": 701, "name": "Course thumbnail templates", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 702, "name": "Infographic layouts", "outputTypes": ["Data Visualization", "Design Structure/Layout"]},
+        {"id": 703, "name": "Educational chart templates", "outputTypes": ["Data Visualization", "Code-based Graphics"]},
+        {"id": 704, "name": "Presentation templates", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 705, "name": "Certificate templates", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]}
+      ]
+    },
+    {
+      "id": 8,
+      "name": "E-commerce & Product",
+      "subcategories": [
+        {"id": 801, "name": "Product showcase banners", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 802, "name": "Product comparison charts", "outputTypes": ["Data Visualization", "Design Structure/Layout"]},
+        {"id": 803, "name": "Price tag designs", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]},
+        {"id": 804, "name": "Shopping cart graphics", "outputTypes": ["Code-based Graphics", "Design Structure/Layout"]},
+        {"id": 805, "name": "Product catalog layouts", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]}
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Event & Occasion",
+      "subcategories": [
+        {"id": 901, "name": "Event poster templates", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 902, "name": "Wedding invitation layouts", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 903, "name": "Conference banners", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 904, "name": "Holiday greeting cards", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 905, "name": "Birthday party graphics", "outputTypes": ["Image", "Design Structure/Layout"]}
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Professional & Corporate",
+      "subcategories": [
+        {"id": 1001, "name": "Report cover templates", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 1002, "name": "Presentation slide masters", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 1003, "name": "Company profile covers", "outputTypes": ["Image", "Design Structure/Layout"]},
+        {"id": 1004, "name": "Invoice headers", "outputTypes": ["Design Structure/Layout", "Code-based Graphics"]},
+        {"id": 1005, "name": "Corporate newsletter headers", "outputTypes": ["Image", "Design Structure/Layout"]}
       ]
     }
   ]
