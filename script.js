@@ -230,7 +230,7 @@ function generateBrief() {
         outputType: selectedOutputType
     });
     
-    // Generate client scenario brief dengan data dari pilihan user
+    // Generate client scenario brief dengan 3 bagian
     currentBrief = `Generate random detailed client scenario:
 
 * Category: ${selectedCategory.name}
@@ -241,7 +241,22 @@ Create realistic client case with:
 * Random client name & industry
 * Specific detailed project context
 * Exact requirements as freelancer needs
-* All relevant business details`;
+* All relevant business details
+
+---
+
+You are a professional AI prompt engineer. Based on the detailed client briefing above, create a comprehensive generation prompt for: **${selectedOutputType}**
+
+[Master template yang smart - adjust content berdasarkan Output Type yang diinput]
+IF Output Type = Image → focus on visual specifications  
+IF Output Type = Design Structure/Layout → focus on layout requirements
+IF Output Type = Code-based Graphics → focus on technical specs
+IF Output Type = Data Visualization → focus on data presentation
+[Universal professional prompt engineering guidelines]
+
+---
+
+Based on the prompt specifications above, generate the **${selectedOutputType}** now.`;
     
     console.log('Generated brief:', currentBrief);
     displayGeneratedBrief();
