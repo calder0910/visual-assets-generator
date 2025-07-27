@@ -55,3 +55,77 @@ p {
 .step h2 {
     margin-bottom: 10px;
 }
+/* Button Styles */
+.categories-grid, .subcategories-grid, .output-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.category-btn, .subcategory-btn, .output-type-btn, .generate-btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.category-btn:hover, .subcategory-btn:hover, .output-type-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+}
+
+.subcategory-btn {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+    box-shadow: 0 4px 15px rgba(168, 237, 234, 0.3);
+}
+
+.subcategory-btn:hover {
+    box-shadow: 0 8px 25px rgba(168, 237, 234, 0.4);
+}
+
+.output-type-btn {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    box-shadow: 0 4px 15px rgba(252, 182, 159, 0.3);
+}
+
+.output-type-btn:hover {
+    box-shadow: 0 8px 25px rgba(252, 182, 159, 0.4);
+}
+
+.generate-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    font-size: 1.2rem;
+    padding: 20px 30px;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+
+.generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .categories-grid, .subcategories-grid, .output-types-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+}
