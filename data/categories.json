@@ -1,0 +1,51 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Social Media Assets",
+      "subcategories": [
+        {
+          "id": 101,
+          "name": "YouTube thumbnail",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        },
+        {
+          "id": 102,
+          "name": "YouTube channel banner",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        },
+        {
+          "id": 103,
+          "name": "Instagram post",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        },
+        {
+          "id": 104,
+          "name": "Instagram Stories",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        },
+        {
+          "id": 105,
+          "name": "TikTok video covers",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Marketing & Advertising",
+      "subcategories": [
+        {
+          "id": 201,
+          "name": "Digital ad banners",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        },
+        {
+          "id": 202,
+          "name": "Email marketing headers",
+          "outputTypes": ["Image", "Design Structure/Layout", "Code-based Graphics"]
+        }
+      ]
+    }
+  ]
+}
