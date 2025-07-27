@@ -230,32 +230,18 @@ function generateBrief() {
         outputType: selectedOutputType
     });
     
-    // Convert names to match JSON keys
-    const categoryKey = selectedCategory.name.toLowerCase().replace(/\s+/g, '-');
-    const subcategoryKey = selectedSubcategory.name.toLowerCase().replace(/\s+/g, '-');
-    
-    // Cek apakah category ada di templates
-    if (!briefTemplates[categoryKey]) {
-        console.error('Category not found in templates:', categoryKey);
-        currentBrief = `Create a professional ${selectedOutputType} for ${selectedSubcategory.name} in the ${selectedCategory.name} category. Focus on high-quality design, clear messaging, and target audience engagement.`;
-        displayGeneratedBrief();
-        return;
-    }
-    
-    // Cek apakah subcategory ada di category
-    if (!briefTemplates[categoryKey][subcategoryKey]) {
-        console.error('Subcategory not found in templates:', subcategoryKey);
-        currentBrief = `Create a professional ${selectedOutputType} for ${selectedSubcategory.name}. Focus on modern design principles, clear communication, and user engagement.`;
-        displayGeneratedBrief();
-        return;
-    }
-    
-    // Get random template dari subcategory
-    const templates = briefTemplates[categoryKey][subcategoryKey];
-    const randomTemplate = templates[Math.floor(Math.random() * templates.length)];
-    
-    // Replace placeholders dengan random values
-    currentBrief = replacePlaceholders(randomTemplate);
+    // Generate client scenario brief dengan data dari pilihan user
+    currentBrief = `Generate random detailed client scenario:
+
+* Category: ${selectedCategory.name}
+* Subcategory: ${selectedSubcategory.name}
+* Output Type: ${selectedOutputType}
+
+Create realistic client case with:
+* Random client name & industry
+* Specific detailed project context
+* Exact requirements as freelancer needs
+* All relevant business details`;
     
     console.log('Generated brief:', currentBrief);
     displayGeneratedBrief();
