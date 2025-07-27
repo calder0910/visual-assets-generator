@@ -284,17 +284,51 @@ function displayGeneratedBrief() {
         </div>
         <div class="step active" id="step4">
             <h2>Step 4: Generated Brief</h2>
-            <div class="brief-display">
+            
+            <!-- Section 1: Client Scenario -->
+            <div class="brief-section">
+                <h3>📋 Client Briefing</h3>
                 <div class="brief-content">
-                    <h3>Your Creative Brief:</h3>
-                    <p class="generated-brief">${currentBrief}</p>
-                </div>
-                <div class="brief-meta">
-                    <p><strong>Category:</strong> ${selectedCategory.name}</p>
-                    <p><strong>Subcategory:</strong> ${selectedSubcategory.name}</p>
-                    <p><strong>Output Type:</strong> ${selectedOutputType}</p>
+                    <p>Generate random detailed client scenario:</p>
+                    <ul>
+                        <li><strong>Category:</strong> ${selectedCategory.name}</li>
+                        <li><strong>Subcategory:</strong> ${selectedSubcategory.name}</li>
+                        <li><strong>Output Type:</strong> ${selectedOutputType}</li>
+                    </ul>
+                    <p>Create realistic client case with:</p>
+                    <ul>
+                        <li>Random client name & industry</li>
+                        <li>Specific detailed project context</li>
+                        <li>Exact requirements as freelancer needs</li>
+                        <li>All relevant business details</li>
+                    </ul>
                 </div>
             </div>
+
+            <!-- Section 2: Prompt Engineering -->
+            <div class="brief-section">
+                <h3>🔧 Prompt Engineering</h3>
+                <div class="brief-content">
+                    <p>You are a professional AI prompt engineer. Based on the detailed client briefing above, create a comprehensive generation prompt for: <strong>${selectedOutputType}</strong></p>
+                    <p>[Master template yang smart - adjust content berdasarkan Output Type yang diinput]</p>
+                    <ul>
+                        <li>IF Output Type = Image → focus on visual specifications</li>
+                        <li>IF Output Type = Design Structure/Layout → focus on layout requirements</li>
+                        <li>IF Output Type = Code-based Graphics → focus on technical specs</li>
+                        <li>IF Output Type = Data Visualization → focus on data presentation</li>
+                    </ul>
+                    <p>[Universal professional prompt engineering guidelines]</p>
+                </div>
+            </div>
+
+            <!-- Section 3: Final Generation -->
+            <div class="brief-section">
+                <h3>⚡ Final Generation</h3>
+                <div class="brief-content">
+                    <p>Based on the prompt specifications above, generate the <strong>${selectedOutputType}</strong> now.</p>
+                </div>
+            </div>
+
             <div class="button-group">
                 <button class="btn btn-secondary" onclick="regenerateBrief()">
                     🎲 Generate New Brief
