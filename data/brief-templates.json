@@ -1,0 +1,152 @@
+{
+  "social-media": {
+    "instagram-post": [
+      "Create an engaging Instagram post for a {brand_type} brand launching their new {product_category}. Focus on lifestyle photography with warm, natural lighting. Include subtle product placement and authentic human interaction.",
+      "Design an Instagram carousel post showcasing {number} benefits of {product_category}. Use minimalist design with bold typography and a cohesive color palette of {color_scheme}.",
+      "Generate an Instagram story-style post featuring a {age_group} {gender} using {product_category} in a {location_type} setting. Emphasize emotional connection and aspirational lifestyle."
+    ],
+    "instagram-story": [
+      "Create an Instagram story template for a {business_type} announcing their {event_type}. Use dynamic shapes, gradient backgrounds, and interactive elements like polls or questions.",
+      "Design a series of {number} Instagram story frames for a {content_type} tutorial. Include step-by-step visual guides with consistent branding and engaging animations.",
+      "Generate an Instagram story for {holiday_season} promotion featuring {discount_percentage}% off {product_category}. Use festive colors and urgent but friendly call-to-action."
+    ],
+    "facebook-cover": [
+      "Design a Facebook cover photo for a {business_type} emphasizing their {unique_value}. Include contact information subtly and maintain professional yet approachable aesthetics.",
+      "Create a seasonal Facebook cover for {season} featuring {business_type} services. Use seasonal colors and imagery while maintaining brand consistency.",
+      "Generate a Facebook cover announcing {event_type} with date {event_date} and location {event_location}. Make it visually striking with clear hierarchy of information."
+    ],
+    "twitter-header": [
+      "Create a Twitter header for a {professional_type} showcasing their expertise in {field}. Use professional photography with subtle geometric patterns and brand colors.",
+      "Design a Twitter header for {event_type} with speakers' photos and key information. Maintain visual balance and ensure text readability across devices.",
+      "Generate a Twitter header for a {business_type} highlighting their {achievement} or {milestone}. Use celebratory elements while keeping it professional."
+    ],
+    "linkedin-post": [
+      "Create a LinkedIn carousel post about {industry_topic} featuring {number} key insights. Use professional design with data visualization and corporate color scheme.",
+      "Design a LinkedIn post announcing {company_news} with professional imagery and subtle company branding. Focus on credibility and trustworthiness.",
+      "Generate a LinkedIn thought leadership post about {trending_topic} in {industry}. Include relevant statistics and professional imagery."
+    ]
+  },
+  "marketing": {
+    "flyer": [
+      "Design a promotional flyer for {event_type} targeting {target_audience}. Use bold colors, clear hierarchy, and compelling imagery. Include essential details: date, time, location, and contact info.",
+      "Create a product launch flyer for {product_category} highlighting {key_benefit}. Use lifestyle photography and persuasive copy with clear call-to-action.",
+      "Generate a service promotion flyer for {service_type} offering {discount_amount} discount. Use testimonials, before/after imagery, and urgency elements."
+    ],
+    "brochure": [
+      "Create a tri-fold brochure for {business_type} explaining their {service_category}. Use professional photography, clear service descriptions, and client testimonials.",
+      "Design a product catalog brochure featuring {number} products from {category}. Include specifications, pricing, and lifestyle imagery for each product.",
+      "Generate a company profile brochure highlighting {company_history}, values, and services. Use corporate photography and infographic elements."
+    ],
+    "banner": [
+      "Design a web banner for {promotion_type} featuring {discount_percentage}% off {product_category}. Use contrasting colors and bold typography with clear CTA button.",
+      "Create an event banner for {event_type} with speakers {speaker_names} and date {event_date}. Use dynamic layouts and professional headshots.",
+      "Generate a seasonal sale banner for {season} featuring {product_category}. Use seasonal imagery and colors with urgency-creating elements."
+    ],
+    "email-template": [
+      "Design an email newsletter template for {business_type} featuring {content_type}. Use responsive design with clear sections for header, content, and footer.",
+      "Create a promotional email template for {product_launch} with hero image, product details, and purchase CTA. Maintain brand consistency throughout.",
+      "Generate a welcome email template for new {customer_type} subscribers. Include onboarding information and next steps with friendly, approachable design."
+    ],
+    "infographic": [
+      "Create an infographic explaining {process_type} in {number} steps. Use icons, flowcharts, and data visualization with consistent color scheme.",
+      "Design a statistical infographic about {industry_topic} featuring {number} key statistics. Use charts, graphs, and compelling visual hierarchy.",
+      "Generate a comparison infographic between {option_a} vs {option_b} highlighting pros, cons, and key differences. Use balanced visual representation."
+    ]
+  },
+  "branding": {
+    "logo": [
+      "Design a modern logo for {business_type} company specializing in {service_area}. Use minimalist approach with symbolic elements representing {brand_value}. Consider versatility across digital and print media.",
+      "Create a vintage-inspired logo for {industry_type} business with {years_established} years of history. Incorporate traditional elements while maintaining contemporary appeal.",
+      "Generate a tech-focused logo for {startup_type} targeting {target_market}. Use geometric shapes and modern typography with scalable design principles."
+    ],
+    "business-card": [
+      "Design a professional business card for {job_title} in {industry}. Include essential contact information with creative use of {company_colors} and subtle texture elements.",
+      "Create a minimalist business card for {business_type} focusing on {unique_selling_point}. Use white space effectively and ensure print-ready specifications.",
+      "Generate a luxury business card for {high_end_service} with premium materials consideration. Include foil accents and embossed elements in the design."
+    ],
+    "letterhead": [
+      "Design a corporate letterhead for {company_type} established in {year}. Include company logo, address, and contact details with professional layout and brand colors.",
+      "Create a medical practice letterhead for {specialty_type} clinic. Maintain professional appearance with trust-building elements and clear hierarchy.",
+      "Generate a legal firm letterhead emphasizing {practice_area}. Use traditional elements with modern touches and ensure formal business communication standards."
+    ],
+    "brand-guidelines": [
+      "Create a brand guidelines document for {business_type} covering logo usage, color palette, typography, and voice. Include do's and don'ts with visual examples.",
+      "Design brand standards for {startup_type} including primary/secondary colors, font families, and imagery style. Provide practical application examples.",
+      "Generate a brand identity guide for {organization_type} with logo variations, spacing rules, and brand personality description."
+    ]
+  },
+  "web-design": {
+    "website-mockup": [
+      "Design a modern website homepage mockup for {business_type} featuring {main_service}. Use clean layout with hero section, services overview, and testimonials.",
+      "Create an e-commerce website mockup for {product_category} with product grid, shopping cart, and user account features. Focus on user experience and conversion optimization.",
+      "Generate a portfolio website mockup for {creative_professional} showcasing {work_type}. Use grid layout with project previews and about section."
+    ],
+    "landing-page": [
+      "Design a conversion-focused landing page for {product_launch} targeting {target_audience}. Include compelling headline, benefit list, social proof, and prominent CTA.",
+      "Create a webinar registration landing page for {topic} featuring speaker {expert_name}. Use persuasive copy and form optimization techniques.",
+      "Generate a service-based landing page for {service_type} with problem-solution approach, pricing table, and contact form."
+    ],
+    "mobile-app-ui": [
+      "Design mobile app interface for {app_category} targeting {user_demographic}. Include onboarding screens, main navigation, and core feature screens.",
+      "Create a fitness app UI featuring workout tracking, progress charts, and social elements. Use motivational design elements and clear data visualization.",
+      "Generate an e-commerce mobile app interface with product browsing, cart functionality, and checkout process. Focus on smooth user flow."
+    ]
+  },
+  "print-design": {
+    "poster": [
+      "Design an event poster for {event_type} featuring {main_attraction}. Use bold typography, vibrant colors, and hierarchical information layout.",
+      "Create a motivational poster for {target_space} with inspirational {quote_theme}. Use impactful imagery and typography treatment.",
+      "Generate a product advertisement poster for {product_category} highlighting {key_benefit}. Include lifestyle imagery and clear product shots."
+    ],
+    "book-cover": [
+      "Design a book cover for {genre} novel titled '{book_title}' targeting {reader_demographic}. Use genre-appropriate imagery and typography style.",
+      "Create a non-fiction book cover about {topic} for {target_audience}. Include subtitle and author credibility elements with professional design.",
+      "Generate a children's book cover featuring {character_type} in {setting}. Use bright colors and playful illustrations appropriate for {age_group}."
+    ],
+    "magazine-layout": [
+      "Design a magazine spread about {article_topic} for {magazine_type} publication. Include headline, body text, pull quotes, and supporting imagery.",
+      "Create a product feature layout for {product_category} in lifestyle magazine. Use high-quality photography and elegant typography treatment.",
+      "Generate a interview layout with {interview_subject} including portrait photography, quote highlights, and biographical sidebar."
+    ],
+    "packaging": [
+      "Design product packaging for {product_type} targeting {consumer_demographic}. Consider shelf appeal, brand consistency, and functional requirements.",
+      "Create eco-friendly packaging design for {sustainable_product} emphasizing environmental benefits. Use earth tones and recyclable material indicators.",
+      "Generate luxury packaging for {premium_product} with unboxing experience consideration. Include premium finishes and brand storytelling elements."
+    ]
+  },
+  "digital-art": [
+    "Create a digital illustration of {subject} in {art_style} style. Use {color_palette} color scheme with {lighting_type} lighting and {composition_type} composition.",
+    "Generate a character design for {character_type} in {setting}. Include full body view, facial expressions, and costume details appropriate for {genre}.",
+    "Design a fantasy landscape featuring {landscape_elements}. Use atmospheric perspective and {mood_type} mood with magical elements.",
+    "Create a portrait illustration of {subject_type} using {technique} technique. Focus on {facial_features} and emotional expression.",
+    "Generate an abstract art piece representing {concept} using {geometric_elements} and {color_theory} principles."
+  ],
+  "photography": [
+    "Plan a {photography_type} photoshoot for {subject} in {location}. Consider {lighting_condition} lighting, {camera_angle} angles, and {mood_type} mood.",
+    "Design a product photography setup for {product_category} emphasizing {product_feature}. Include lighting diagram and prop suggestions.",
+    "Create a portrait photography concept for {subject_type} using {lighting_setup} and {background_type} background.",
+    "Generate a lifestyle photography brief for {brand_type} featuring {activity} in {location_type} setting.",
+    "Plan an event photography coverage for {event_type} including {key_moments} and group photography requirements."
+  ],
+  "video-content": [
+    "Create a video concept for {video_type} about {topic} targeting {audience}. Include script outline, visual style, and call-to-action strategy.",
+    "Design a social media video for {platform} promoting {product_service}. Consider {video_length} duration and platform-specific requirements.",
+    "Generate an explainer video concept for {complex_topic} using {animation_style} animation and {narrator_type} narration.",
+    "Plan a testimonial video featuring {customer_type} discussing {benefit_experienced}. Include interview questions and b-roll suggestions.",
+    "Create a behind-the-scenes video concept for {business_type} showing {process_type} to build trust and transparency."
+  ],
+  "presentations": [
+    "Design a business presentation template for {presentation_type} with {slide_count} slides. Include title slide, agenda, content slides, and conclusion.",
+    "Create a pitch deck for {startup_type} seeking {funding_amount} funding. Include problem, solution, market size, and financial projections slides.",
+    "Generate a training presentation about {training_topic} for {audience_type}. Include interactive elements and knowledge check slides.",
+    "Design a product launch presentation featuring {product_name} with demonstration slides and benefit highlights.",
+    "Create an annual report presentation for {organization_type} including financial data, achievements, and future goals."
+  ],
+  "ui-ux": [
+    "Design a user interface for {app_type} app focusing on {primary_function}. Consider {user_demographic} users and {device_type} optimization.",
+    "Create a user experience flow for {process_type} including wireframes, user journey, and interaction points.",
+    "Generate a dashboard design for {software_type} with data visualization, navigation, and user management features.",
+    "Design a checkout process for {ecommerce_type} focusing on conversion optimization and user trust building.",
+    "Create an onboarding experience for {service_type} app including welcome screens, feature introduction, and setup process."
+  ]
+}
